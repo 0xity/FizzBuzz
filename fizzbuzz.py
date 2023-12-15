@@ -1,13 +1,12 @@
 def fizzbuzz():
+    output = ""
+    values = {3: "Fizz", 5: "Buzz"}
     for i in range(1, 101, 1):
-        if i % 15 == 0:
-            print(f"{i} FizzBuzz!")
-        elif i % 3 == 0:
-            print(f"{i} Fizz!")
-        elif i % 5 == 0:
-            print(f"{i} Buzz!")
-        else:
-            print(i)
+        for j in values:
+            if i % j == 0:
+                output += values.get(j)
+        print(i, output)
+        output = ""
 
 
 fizzbuzz()
